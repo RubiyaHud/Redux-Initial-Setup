@@ -43,6 +43,7 @@
         </Provider>
       );
   ```
-
+- **Create a Redux State Slice**
+    - Slice works like a function.
 
 
