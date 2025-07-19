@@ -6,6 +6,7 @@
     npm install @reduxjs/toolkit react-redux  
   ```
 - Check the installation
+  
   <img width="746" height="945" alt="image" src="https://github.com/user-attachments/assets/a5641f8d-0eb6-4796-abd3-d38ce5ea3d49" />
 
 
