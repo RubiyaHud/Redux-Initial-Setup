@@ -1,9 +1,9 @@
 ## Redux Setup
 - Go to the link [Redux Toolkit Quick Start](https://redux.js.org/tutorials/quick-start)
-- Type the command in the `Gitbash`
+- Type the command in the `Gitbash` terminal
+
   ```
-    npm install @reduxjs/toolkit react-redux
-  
+    npm install @reduxjs/toolkit react-redux  
   ```
 - 
 
