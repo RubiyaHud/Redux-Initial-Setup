@@ -10,7 +10,7 @@
   <img width="746" height="945" alt="image" src="https://github.com/user-attachments/assets/a5641f8d-0eb6-4796-abd3-d38ce5ea3d49" />
 
 - **Create a Redux Store:**
-    - Create a file named `src/store.js`.
+    - Create a file named `src/store.js`and Copy-paste the code below.
     - Import the `configureStore` API from Redux Toolkit.
     - We'll start by creating an empty Redux store, and exporting it:
       
@@ -26,7 +26,8 @@
 - **Provide the Redux Store to React**
   - Once the store is created, we can make it available to our React components by putting a React-Redux `<Provider>` around our application in `src/main.jsx`.
   - Import the Redux store we just created, put a `<Provider>` around your `<App>`, and pass the store as a prop:
-  ```main.jsx
+    
+  ```
       import { createRoot } from 'react-dom/client'
       import { BrowserRouter } from 'react-router-dom';
       import './index.css'
