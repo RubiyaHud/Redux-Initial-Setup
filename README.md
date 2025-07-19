@@ -26,7 +26,23 @@
 - **Provide the Redux Store to React**
   - Once the store is created, we can make it available to our React components by putting a React-Redux `<Provider>` around our application in `src/main.jsx`.
   - Import the Redux store we just created, put a `<Provider>` around your `<App>`, and pass the store as a prop:
-  
+  ```main.jsx
+      import { createRoot } from 'react-dom/client'
+      import { BrowserRouter } from 'react-router-dom';
+      import './index.css'
+      import App from './App.jsx'
+      import { Provider } from 'react-redux'
+      import myStore from './store.js';
+      
+      createRoot(document.getElementById('root')).render(
+        // store is a prop name
+        <Provider store={myStore}>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </Provider>
+      );
+  ```
 
 
 
