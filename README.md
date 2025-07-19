@@ -24,6 +24,7 @@
     - This creates a Redux store, and also automatically configure the Redux DevTools extension so that we can inspect the store while developing.
   
 - **Provide the Redux Store to React**
+  - Copy-paste the code below to `main.jsx`
   - Once the store is created, we can make it available to our React components by putting a React-Redux `<Provider>` around our application in `src/main.jsx`.
   - Import the Redux store we just created, put a `<Provider>` around your `<App>`, and pass the store as a prop:
     
