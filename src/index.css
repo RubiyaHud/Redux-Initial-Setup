@@ -1,0 +1,24 @@
+.myUnderline {
+    position: relative;
+    cursor: pointer;
+    /* display: inline-block; */
+    /* padding-right: 150px; */
+    transition: all 0.4s;
+}
+
+.myUnderline::after {
+    content: '';
+    height: 2px;
+    width: 50%;
+    background: green;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    opacity: 0;
+    transition: all 0.4s;
+    /*optional*/
+    pointer-events: none;
+}
+.myUnderline:hover::after, .myUnderline:focus::after {
+  opacity:1; 
+}

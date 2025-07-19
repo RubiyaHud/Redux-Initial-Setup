@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+   
+    --font-jost: "Jost", "sans-serif";
+    --color-head: #222222; 
+    --my-decoration-thickness:10px
+    
+  }
