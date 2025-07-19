@@ -46,6 +46,8 @@
       );
   ```
 - **Create a Redux State Slice**
+    - Create a folder named `src/slices`
+    - Add a new file named `src/slices/counterSlice.jsx`
     - Slice works like a function.
 
 
