@@ -50,5 +50,6 @@
     - Add a new file named `src/slices/counterSlice.jsx`
     - `counterSlice` can hold one/multiple `Reducer Functions` for specific `Actions`. 
     
-
+- **Add Slice Reducers to the Store**
+    
 
