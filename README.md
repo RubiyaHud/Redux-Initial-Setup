@@ -57,11 +57,11 @@
 
 - **Add Redux DevTools** 
     - Go to the google chrome extension and add `Redux DevTools`
-    - <img width="1114" height="734" alt="image" src="https://github.com/user-attachments/assets/42d6e587-985d-4791-afd5-341e11a59dad" />
+      <img width="1114" height="734" alt="image" src="https://github.com/user-attachments/assets/42d6e587-985d-4791-afd5-341e11a59dad" />
 
-    - Open inspect my right mouseclick and click the `Redux->State`. We can see the store named `counter` and it's inital value '0'
+    - Open inspect by mouse right-click, then click the `Redux->State`. We can see the store `counter` and it's inital value '0'
  
-    - <img width="1919" height="794" alt="image" src="https://github.com/user-attachments/assets/9eccedeb-a353-464c-94bc-d9508278f750" />
+      <img width="1919" height="794" alt="image" src="https://github.com/user-attachments/assets/9eccedeb-a353-464c-94bc-d9508278f750" />
 
 
 
