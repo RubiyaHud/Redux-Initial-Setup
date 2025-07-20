@@ -88,9 +88,15 @@
     - Go to the google chrome extension and add `Redux DevTools`
       <img width="1114" height="734" alt="image" src="https://github.com/user-attachments/assets/42d6e587-985d-4791-afd5-341e11a59dad" />
 
-    - Open inspect by mouse right-click, then click the `Redux->State`. We can see the store `counter` and it's inital value '0'
+    - Open inspect by mouse right-click, then click the `Redux->State`. We can see the store `counter` and it's inital value `0`
  
       <img width="1919" height="794" alt="image" src="https://github.com/user-attachments/assets/9eccedeb-a353-464c-94bc-d9508278f750" />
+    
+    - Here, store name is coming from `store.js` and the initial-value is coming from `counterSlice.jsx`
+      <img width="547" height="249" alt="image" src="https://github.com/user-attachments/assets/966eebb3-e7c3-4934-ac13-8147f30909da" />
+      <img width="798" height="665" alt="image" src="https://github.com/user-attachments/assets/ce2232dc-4436-42b0-9088-2dabb9840724" />
+
+
 
 
 
