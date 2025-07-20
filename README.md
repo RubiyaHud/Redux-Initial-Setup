@@ -55,6 +55,9 @@
     - By defining a field inside the `reducer` parameter, we tell the store to use this slice reducer function to handle all updates to that state.
     - <img width="547" height="244" alt="image" src="https://github.com/user-attachments/assets/eccaa5a0-6a38-4dd5-b51f-1e5c63e259c8" />
 
+- **Add Redux DevTools** 
+    - Go to the google chrome extension and add `Redux DevTools`
+    - <img width="1114" height="734" alt="image" src="https://github.com/user-attachments/assets/42d6e587-985d-4791-afd5-341e11a59dad" />
 
 
 
