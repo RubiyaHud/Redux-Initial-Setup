@@ -1,5 +1,5 @@
 ## Redux Setup
-- Go to the link [Redux Toolkit Quick Start](https://redux.js.org/tutorials/quick-start)
+- Go to the link [Redux Toolkit Quick Start](https://react-redux.js.org/tutorials/quick-start)
 - Type the command in the `Gitbash` terminal
 
   ```
