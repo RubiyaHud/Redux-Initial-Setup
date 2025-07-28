@@ -80,7 +80,7 @@
         export default counterSlice.reducer
      ```
 - **Add Slice Reducers to the Store**
-    - Next, we need to import the reducer function from the counter slice and add it to our `store`.
+    - Next, we need to import the `reducer function` from the `counter slice` and add it to our `store`.
     - By defining a field inside the `reducer` parameter, we tell the store to use this slice reducer function to handle all updates to that state.
     - <img width="547" height="244" alt="image" src="https://github.com/user-attachments/assets/eccaa5a0-6a38-4dd5-b51f-1e5c63e259c8" />
 
