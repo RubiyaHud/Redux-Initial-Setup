@@ -11,7 +11,7 @@
 
 - **Create a Redux Store:**
     - Create a file named `src/store.js`and Copy-paste the code below.
-    - Import the `configureStore` API from Redux Toolkit.
+    - Here, we import the `configureStore` API from `Redux Toolkit`.
     - We'll start by creating an empty Redux store, and exporting it:
       
     ```
