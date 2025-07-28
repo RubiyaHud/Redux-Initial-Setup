@@ -21,7 +21,7 @@
       reducer: {}
     })
     ```
-    - This creates a Redux store, and also automatically configure the Redux DevTools extension so that we can inspect the store while developing.
+    - This creates a `Redux store`, and also automatically configure the Redux DevTools extension so that we can inspect the store while developing.
   
 - **Provide the Redux Store to React**
   - Copy-paste the code below to `main.jsx`
