@@ -48,8 +48,8 @@
       );
   ```
 ### 4. **Create a Redux State Slice**
-    - Create a folder named `src/slices`
-    - Add a new file named `src/slices/counterSlice.jsx`
+  - Create a folder named `src/slices`
+  - Add a new file named `src/slices/counterSlice.jsx`
     - `counterSlice` can hold one/multiple `Reducer Functions` for specific `Actions`.
     - Initial code for `counterSlice` is given below:
      ```
