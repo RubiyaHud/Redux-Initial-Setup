@@ -102,6 +102,8 @@
 
 
 ### 7. **Use Redux State and Actions in React Components**
+  - Now we can use the <ins>React Redux hooks</ins> to let <ins>React components</ins> interact with the `Redux store`
+  - We can read data from the store with `useSelector`, and dispatch actions using `useDispatch`
 
 
 
