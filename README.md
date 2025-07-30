@@ -1,12 +1,123 @@
-# React + Vite
+# Redux Setup
+### 1. **Installation**
+  - Go to the link [Redux Toolkit Quick Start](https://react-redux.js.org/tutorials/quick-start)
+  - Type the command in the `Gitbash` terminal
+  
+    ```
+      npm install @reduxjs/toolkit react-redux  
+    ```
+  - Check the installation
+    
+    <img width="746" height="945" alt="image" src="https://github.com/user-attachments/assets/a5641f8d-0eb6-4796-abd3-d38ce5ea3d49" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 2. **Create a Redux Store:**
+  - Create a file named `src/store.js`and Copy-paste the code below.
+  - Here, we import the `configureStore` API from `Redux Toolkit`.
+  - We'll start by creating an <ins>empty</ins> Redux store, and exporting it:
+  - ```
+        import { configureStore } from '@reduxjs/toolkit'
+      
+        export default configureStore({
+          reducer: {}
+        })
+        
+      
+    ```
+  - This creates a `Redux store`, and also automatically configure the Redux DevTools extension so that we can inspect the store while developing.
+  
+### 3. **Provide the Redux Store to React**
+  - Copy-paste the code below to `main.jsx`
+  - Once the store is created, we can make it available to our React components by putting a React-Redux `<Provider>` around our application in `src/main.jsx`.
+  - Import the Redux store we just created, put a `<Provider>` around your `<App>`, and pass the store as a prop:
+    
+  ```
+      import { createRoot } from 'react-dom/client'
+      import { BrowserRouter } from 'react-router-dom';
+      import './index.css'
+      import App from './App.jsx'
+      import { Provider } from 'react-redux'
+      import myStore from './store.js';
+      
+      createRoot(document.getElementById('root')).render(
+        // store is a prop name
+        <Provider store={myStore}>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </Provider>
+      );
+  ```
+### 4. **Create a Redux State Slice**
+  - Create a folder named `src/slices`
+  - Add a new file named `src/slices/counterSlice.jsx`
+    - `counterSlice` can hold one/multiple `Reducer Functions` for specific `Actions`.
+    - Initial code for `counterSlice` is given below:
+     ```
+         import { createSlice } from '@reduxjs/toolkit'
 
-Currently, two official plugins are available:
+        export const counterSlice = createSlice({
+          name: 'counter',
+          //initial value of the state variable in reducer function
+          initialState: {
+            //name 'value' and it's initial-value can be changed
+            value: 0, //or, null
+          },
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+        // Reducer functions (i.e. increment) are defined here, 
+          reducers: {
+        
+            //state is a current value, or the initial value, 
+            //action contains parameters from outside, or data are passed through 'action'
+            increment: (state, action) => {
+            //   state.value += 1
+              console.log(state.value)
+            },
+            
+          },
+        })
 
-## Expanding the ESLint configuration
+        // Action creators are generated for each case reducer function
+        export const { increment } = counterSlice.actions
+        
+        export default counterSlice.reducer
+     ```
+### 5. **Add Slice Reducers to the Store**
+  - Next, we need to import the `reducer function` from the `counter slice` and add it to our `store`
+  - By defining a field inside the `reducer` parameter, we tell the store to use this slice reducer function to handle all updates to that state.
+    - <img width="547" height="244" alt="image" src="https://github.com/user-attachments/assets/eccaa5a0-6a38-4dd5-b51f-1e5c63e259c8" />
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 6. **Add Redux DevTools**
+  - Go to the google chrome extension and add `Redux DevTools`
+      <img width="1114" height="734" alt="image" src="https://github.com/user-attachments/assets/42d6e587-985d-4791-afd5-341e11a59dad" />
+
+  - Open inspect by mouse right-click, then click the `Redux->State`. We can see the store `counter` and it's inital value `0`
+ 
+      <img width="1919" height="794" alt="image" src="https://github.com/user-attachments/assets/9eccedeb-a353-464c-94bc-d9508278f750" />
+    
+      - Here, store name is coming from `store.js` and the initial-value is coming from `counterSlice.jsx`
+      
+        <img width="547" height="249" alt="image" src="https://github.com/user-attachments/assets/966eebb3-e7c3-4934-ac13-8147f30909da" />
+      
+        <img width="798" height="665" alt="image" src="https://github.com/user-attachments/assets/ce2232dc-4436-42b0-9088-2dabb9840724" />
+
+
+### 7. **Use Redux State and Actions in React Components**
+  - Now we can use the <ins>React Redux hooks</ins> to let <ins>React components</ins> interact with the `Redux store`
+  - We can read data from the store with `useSelector`, and dispatch actions using `useDispatch`
+  - Now, Create a `button` on an existing page `src/pages/Shop.js`, which `Increment the Counter value by 1`
+    - <img width="1136" height="846" alt="image" src="https://github.com/user-attachments/assets/13cbd19f-4ee5-4a5c-9124-8684d72061e0" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
