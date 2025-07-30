@@ -52,35 +52,8 @@
   - Add a new file named `src/slices/counterSlice.jsx`
     - `counterSlice` can hold one/multiple `Reducer Functions` for specific `Actions`.
     - Initial code for `counterSlice` is given below:
-     ```
-         import { createSlice } from '@reduxjs/toolkit'
+        <img width="652" height="759" alt="image" src="https://github.com/user-attachments/assets/def258bc-e261-405d-9b2e-194449e537e2" />
 
-        export const counterSlice = createSlice({
-          name: 'counter',
-          //initial value of the state variable in reducer function
-          initialState: {
-            //name 'value' and it's initial-value can be changed
-            value: 0, //or, null
-          },
-
-        // Reducer functions (i.e. increment) are defined here, 
-          reducers: {
-        
-            //state is a current value, or the initial value, 
-            //action contains parameters from outside, or data are passed through 'action'
-            increment: (state, action) => {
-            //   state.value += 1
-              console.log(state.value)
-            },
-            
-          },
-        })
-
-        // Action creators are generated for each case reducer function
-        export const { increment } = counterSlice.actions
-        
-        export default counterSlice.reducer
-     ```
 ### 5. **Add Slice Reducers to the Store**
   - Next, we need to import the `reducer function` from the `counter slice` and add it to our `store`
   - By defining a field inside the `reducer` parameter, we tell the store to use this slice reducer function to handle all updates to that state.
