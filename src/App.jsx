@@ -6,6 +6,10 @@ import RootLayout from './components/layouts/RootLayout'
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/pages/Home'
 import Shop from './components/pages/Shop'
+import Collection from './components/pages/Collection'
+import Journal from './components/pages/Journal'
+import Lookbook from './components/pages/Lookbook'
+import Pages from './components/pages/Pages'
 
 function App() {
 
@@ -19,6 +23,10 @@ function App() {
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home />} />
           <Route path="shop" element={<Shop />} />
+          <Route path="journal" element={<Journal/>} />
+          <Route path="collection" element={<Collection/>} />
+          <Route path="lookbook" element={<Lookbook/>} />
+          <Route path="pages" element={<Pages/>} />
         </Route>
       </Routes>
     </>
