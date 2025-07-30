@@ -51,7 +51,7 @@
   - Create a folder named `src/slices`
   - Add a new file named `src/slices/counterSlice.jsx`
     - `counterSlice` can hold one/multiple `Reducer Functions` for specific `Actions`.
-    - Initial code for `counterSlice` is given below:
+    - Initial code for `counterSlice` is given below: [File Link](https://github.com/RubiyaHud/Redux-Initial-Setup/blob/main/src/slices/counterSlice.jsx) 
       
         <img width="539" height="636" alt="image" src="https://github.com/user-attachments/assets/be317cde-43a5-41bd-a2d6-3f8ccc1988b6" />
         <img width="780" height="653" alt="image" src="https://github.com/user-attachments/assets/deaab726-cc5c-4910-bbae-b7f46c0eb41f" />
