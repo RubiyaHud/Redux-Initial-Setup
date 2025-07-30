@@ -52,7 +52,9 @@
   - Add a new file named `src/slices/counterSlice.jsx`
     - `counterSlice` can hold one/multiple `Reducer Functions` for specific `Actions`.
     - Initial code for `counterSlice` is given below:
-        <img width="652" height="759" alt="image" src="https://github.com/user-attachments/assets/def258bc-e261-405d-9b2e-194449e537e2" />
+      
+        <img width="539" height="636" alt="image" src="https://github.com/user-attachments/assets/be317cde-43a5-41bd-a2d6-3f8ccc1988b6" />
+
 
 ### 5. **Add Slice Reducers to the Store**
   - Next, we need to import the `reducer function` from the `counter slice` and add it to our `store`
