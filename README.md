@@ -104,6 +104,9 @@
 ### 7. **Use Redux State and Actions in React Components**
   - Now we can use the <ins>React Redux hooks</ins> to let <ins>React components</ins> interact with the `Redux store`
   - We can read data from the store with `useSelector`, and dispatch actions using `useDispatch`
+  - Now, Create a `button` on an existing page `src/pages/Shop.js`, which `Increment the Counter value by 1`
+    - <img width="1136" height="846" alt="image" src="https://github.com/user-attachments/assets/13cbd19f-4ee5-4a5c-9124-8684d72061e0" />
+
 
 
 
