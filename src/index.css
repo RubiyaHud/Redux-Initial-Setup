@@ -13,12 +13,38 @@
     background: green;
     position: absolute;
     left: 0;
-    bottom: -8px;
+    bottom: -2px;
     opacity: 0;
     transition: all 0.4s;
     /*optional*/
     pointer-events: none;
 }
 .myUnderline:hover::after, .myUnderline:focus::after {
+  opacity:1; 
+}
+
+/* ----------------- Footer ------------------ */
+.myUnderline_footer {
+    position: relative;
+    cursor: pointer;
+    /* display: inline-block; */
+    /* padding-right: 150px; */
+    transition: all 0.4s;
+}
+
+.myUnderline_footer::after {
+    content: '';
+    height: 2px;
+    width: 50%;
+    background: green;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    opacity: 0;
+    transition: all 0.4s;
+    /*optional*/
+    pointer-events: none;
+}
+.myUnderline_footer:hover::after, .myUnderline_footer:focus::after {
   opacity:1; 
 }
