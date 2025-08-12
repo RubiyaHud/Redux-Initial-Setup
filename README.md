@@ -51,36 +51,13 @@
   - Create a folder named `src/slices`
   - Add a new file named `src/slices/counterSlice.jsx`
     - `counterSlice` can hold one/multiple `Reducer Functions` for specific `Actions`.
-    - Initial code for `counterSlice` is given below:
-     ```
-         import { createSlice } from '@reduxjs/toolkit'
+    - Initial code for `counterSlice` is given below: [File Link](https://github.com/RubiyaHud/Redux-Initial-Setup/blob/main/src/slices/counterSlice.jsx) 
+      
+        <img width="539" height="636" alt="image" src="https://github.com/user-attachments/assets/be317cde-43a5-41bd-a2d6-3f8ccc1988b6" />
+        <img width="780" height="653" alt="image" src="https://github.com/user-attachments/assets/deaab726-cc5c-4910-bbae-b7f46c0eb41f" />
 
-        export const counterSlice = createSlice({
-          name: 'counter',
-          //initial value of the state variable in reducer function
-          initialState: {
-            //name 'value' and it's initial-value can be changed
-            value: 0, //or, null
-          },
 
-        // Reducer functions (i.e. increment) are defined here, 
-          reducers: {
-        
-            //state is a current value, or the initial value, 
-            //action contains parameters from outside, or data are passed through 'action'
-            increment: (state, action) => {
-            //   state.value += 1
-              console.log(state.value)
-            },
-            
-          },
-        })
 
-        // Action creators are generated for each case reducer function
-        export const { increment } = counterSlice.actions
-        
-        export default counterSlice.reducer
-     ```
 ### 5. **Add Slice Reducers to the Store**
   - Next, we need to import the `reducer function` from the `counter slice` and add it to our `store`
   - By defining a field inside the `reducer` parameter, we tell the store to use this slice reducer function to handle all updates to that state.
@@ -104,8 +81,19 @@
 ### 7. **Use Redux State and Actions in React Components**
   - Now we can use the <ins>React Redux hooks</ins> to let <ins>React components</ins> interact with the `Redux store`
   - We can read data from the store with `useSelector`, and dispatch actions using `useDispatch`
-  - Now, Create a `button` on an existing page `src/pages/Shop.js`, which `Increment the Counter value by 1`
-    - <img width="1136" height="846" alt="image" src="https://github.com/user-attachments/assets/13cbd19f-4ee5-4a5c-9124-8684d72061e0" />
+  - Now, Create a `button` on an existing page `src/components/pages/Shop.jsx`, which `Increments the Counter value by 1`: [File Link](https://github.com/RubiyaHud/Redux-Initial-Setup/blob/main/src/components/pages/Shop.jsx)
+    
+      <img width="1136" height="846" alt="image" src="https://github.com/user-attachments/assets/13cbd19f-4ee5-4a5c-9124-8684d72061e0" />
+      
+      <img width="750" height="470" alt="image" src="https://github.com/user-attachments/assets/7106a666-44aa-4f3f-829e-dd960390f25c" />
+      
+  - Now, Create a `button` on an existing page `src/components/pages/Collection.jsx`, which `Decrements the Counter value by 1` of the same `state value`: [File Link](https://github.com/RubiyaHud/Redux-Initial-Setup/blob/main/src/components/pages/Collection.jsx)
+    
+      <img width="1004" height="772" alt="image" src="https://github.com/user-attachments/assets/4d93870c-f101-4ae3-a96a-390b2d64eeed" />
+
+      <img width="776" height="532" alt="image" src="https://github.com/user-attachments/assets/6924fb65-3d4b-4c20-83ca-4f4f2118a28a" />
+
+
 
 
 
