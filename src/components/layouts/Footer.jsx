@@ -29,7 +29,7 @@ const Footer = () => {
               </div>
             </div>
             {/* ------------- COMPANY ----------------*/}
-            <div className='mr-30'>
+            <div className='mr-26'>
               <h1 className='pb-[45px] font-jost font-medium text-[18px]'>COMPANY</h1>
               <ul>
                 <li className='font-jost font-normal text-[14px] leading-10 myUnderline_footer' >About Us</li>
@@ -40,7 +40,7 @@ const Footer = () => {
               </ul>
             </div>
             {/* ------------- SHOP ----------------*/}
-            <div className='mr-30'>
+            <div className='mr-26'>
               <h1 className='pb-[45px] font-jost font-medium text-[18px]'>SHOP</h1>
               <ul>
                 <li className='font-jost font-normal text-[14px] leading-10 myUnderline_footer'>New Arrivals</li>
@@ -51,7 +51,7 @@ const Footer = () => {
               </ul>
             </div>
             {/* ------------- HELP ----------------*/}
-            <div className='mr-30'>
+            <div className='mr-26'>
               <h1 className='pb-[45px] font-jost font-medium text-[18px]'>HELP</h1>
               <ul>
                 <li className='font-jost font-normal text-[14px] leading-10 myUnderline_footer'>Customer Service</li>
