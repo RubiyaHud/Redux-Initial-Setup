@@ -18,7 +18,7 @@ export const addToCartSlice = createSlice({
       // action.payload contains the only one product that is just dispatched for 'addToCart'
 
       let cart = state.value.find(item => item.id == action.payload.id)
-      console.log(cart)
+      // console.log(cart)
 
       if(cart){
         cart.quantity += 1

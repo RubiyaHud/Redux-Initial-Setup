@@ -54,20 +54,6 @@ const LimitedEdition = () => {
                                     />
                                 </div>
                             ))}
-
-                            {/* <div className='px-3'>
-                                <Product />
-                            </div>
-                            <div className='px-3'>
-                                <Product />
-                            </div>
-                            <div className='px-3'>
-                                <Product />
-                            </div>
-                            <div className='px-3'>
-                                <Product />
-                            </div> */}
-
                         </Slider>
                     </div>
                 </Container>
