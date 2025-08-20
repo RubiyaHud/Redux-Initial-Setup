@@ -11,9 +11,20 @@ import { FaMinus } from "react-icons/fa";
 
 const Cart = ({ showCart, setShowCart }) => {
 
+    let totalProduct = 0;
     /*Get data from Redux Store named "addToCart" by using useSelector */
     const cartData = useSelector((state) => state.addToCart.value);
+
+    cartData.map((item) => {
+        // console.log(item.image);
+        // console.log(item.quantity); 
+        
+        totalProduct = totalProduct + item.quantity;
+        console.log(totalProduct);
+    });
+
     const cartEmpty = cartData.length === 0;
+    // console.log(cartData.length);
     // console.log(cartEmpty);
 
 
@@ -21,7 +32,7 @@ const Cart = ({ showCart, setShowCart }) => {
         <>
             {/* ------ Cart Box in right side ---------- */}
             {showCart &&
-                <div className='w-1/3 h-[97%] absolute bg-white border-2 border-[#4A4A4A] top-3 right-3 rounded-2xl z-20'>
+                <div className='w-1/3 h-[97%] absolute bg-white border-2 border-[#4A4A4A] top-3 right-3 rounded-2xl z-20 overflow-y-scroll'>
 
                     {cartEmpty &&
                         <EmptyCart showCart={showCart} setShowCart={setShowCart} />
@@ -39,54 +50,52 @@ const Cart = ({ showCart, setShowCart }) => {
                         <div className="mb-7 border-t border-2 border-[#066A31]"></div>
 
                         {/* Products in Cartbox*/}
-                        <div>
-                            <Flex className={"items-center justify-between"}>
-                                <ul>
-                                     {cartData.map(item=>(
-                                    // <Image imgSrc={item.thumbnail} imgAlt={productImg} />
-                                    <>
-                                    <li>{item.id}</li>
-                                    <li><Image imgSrc={item.thumbnail} /></li>
+                        <div className="pb-9">
 
-                                    </>
-                                    
+                            <ul>
+                                {cartData.map((item) => (
+                                    <li key={item.id} className={"mb-4 flex items-center"}>
+                                        {/* <!-- Product Image --> */}
+                                        <Image
+                                            imgSrc={item.image}   // <-- must be a valid image URL
+                                            imgAlt="product image"
+                                            className="w-20 h-20 object-cover rounded-lg"
+                                        />
+                                        {/* <!-- Product Info --> */}
+                                        <div className='w-[75%] ml-3.5'>
+                                            <h3
+                                                className='pb-3.5 font-jost font-medium text-[18px] leading-5 tracking-[0.1px] text-[#4A4A4A]'>
+                                                {item.title}
+                                            </h3>
+                                            <p
+                                                className='font-jost font-normal text-[16px] leading-5 tracking-[0.1px] text-[#4A4A4AB3]'>
+                                                $ {item.price}
+                                            </p>
+                                        </div>
+                                        {/* Product counter */}
+                                        <div className="flex flex-col items-center">
+                                            {/* <!-- Plus button --> */}
+                                            <FaPlus className='mb-1 cursor-pointer text-[16px] text-[#4A4A4A] hover:text-gray-400' />
 
+                                            {/* <!-- Number box --> */}
+                                            <div className="px-4 py-2 border rounded-lg text-gray-600 ">
+                                                1
+                                            </div>
+
+                                            {/* <!-- Minus button --> */}
+                                            <FaMinus className='cursor-pointer text-[16px] text-[#4A4A4A] hover:text-gray-400' />
+
+                                            {/* <!-- Remove link --> */}
+                                            <button className="mt-2 cursor-pointer text-sm text-gray-500 underline hover:text-red-500">
+                                                Remove
+                                            </button>
+                                        </div>
+
+                                    </li>
                                 ))}
-
-                                </ul>
-                               
-                                
-                                {/* <!-- Product Image --> */}
-                                {/* <Image imgSrc={socksImg} imgAlt={"socksImg"} /> */}
-                                
-                                {/* <!-- Product Info --> */}
-                                {/* <div>
-                                    <h3 className='pb-3.5 font-jost font-medium text-[18px] leading-5 tracking-[0.1px] text-[#4A4A4A]'> 3-Pack Performance Compression Sock - White </h3>
-                                    <p className='font-jost font-normal text-[16px] leading-5 tracking-[0.1px] text-[#4A4A4AB3]'> Tk 7,500.00 </p>
-                                </div> */}
-
-                                {/* Product counter */}
-                                <div class="flex flex-col items-center">
-                                    {/* <!-- Plus button --> */}
-                                    <FaPlus className='mb-1 cursor-pointer text-[16px] text-[#4A4A4A] hover:text-gray-400' />
-
-                                    {/* <!-- Number box --> */}
-                                    <div class="px-4 py-2 border rounded-lg text-gray-600 ">
-                                        1
-                                    </div>
-
-                                    {/* <!-- Minus button --> */}
-                                    <FaMinus className='cursor-pointer text-[16px] text-[#4A4A4A] hover:text-gray-400' />
-
-                                    {/* <!-- Remove link --> */}
-                                    <button class="mt-2 cursor-pointer text-sm text-gray-500 underline hover:text-red-500">
-                                        Remove
-                                    </button>
-                                </div>
-                            </Flex>
+                            </ul>
                         </div>
                     </div>
-
                 </div>
             }
         </>
