@@ -8,7 +8,7 @@ import { addToCart } from '../slices/addToCartSlice';
 
 const Product = ({ productId, productImg, productTitle, productPrice }) => {
 
-    //Send data to Redux-Store "addToCartSlice" using useDisptach()
+    //Send data to reducer function "addToCart()" of Redux-Store "addToCartSlice" using useDisptach()
     let dispatch = useDispatch();
     let handleAddToCart = () => {
         // console.log("cart")

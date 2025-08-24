@@ -13,26 +13,51 @@ export const addToCartSlice = createSlice({
       // console.log( state.value)
       // console.log(action.payload)
 
-      // Check by using the "product id" that => Does the product is already in the Cart?
-      // state.value contains all products in the cart
-      // action.payload contains the only one product that is just dispatched for 'addToCart'
+      {/*Check by using the "product id" that => Does the product is already in the Cart?
+      state.value contains all products in the cart
+      action.payload contains the only one product that is just dispatched for 'addToCart'*/}
 
       let cart = state.value.find(item => item.id == action.payload.id)
       // console.log(cart)
 
-      if(cart){
+      if (cart) {
         cart.quantity += 1
-      }else{
-        // We can Add a new property "size" and set it a value, then Push this new object into the state.value array
-        // state.value.push({...action.payload, size:18})  
-        state.value.push({...action.payload})
+      } else {
+        {/* // We can Add a new property "size" and set it a value, then Push this new object into the state.value array
+        state.value.push({...action.payload, size:18})  */}
+        state.value.push({ ...action.payload })
       }
+    },
 
+    incrementCart: (state, action) => {
+      const productId = action.payload;
+      const cartItem = state.value.find(item => item.id === productId);
+
+      if (cartItem) {
+        console.log(cartItem.title);
+        cartItem.quantity += 1;
+      }
+    },
+
+    decrementCart: (state, action) => {
+      const productId = action.payload;
+      const cartItem = state.value.find(item => item.id === productId);
+
+      if (cartItem) {
+        console.log(cartItem.title);
+        if (cartItem.quantity > 1)
+          cartItem.quantity -= 1;
+      }
+    },
+
+    removeFromCart: (state, action) => {
+      const productId = action.payload;
+      state.value = state.value.filter(item => item.id !== productId);
     },
   },
 });
 
-export const { addToCart } = addToCartSlice.actions;
+export const { addToCart, incrementCart, decrementCart, removeFromCart } = addToCartSlice.actions;
 
 export default addToCartSlice.reducer;
 

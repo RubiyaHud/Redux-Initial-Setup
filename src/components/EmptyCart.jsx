@@ -3,6 +3,7 @@ import Flex from './Flex'
 import Image from './Image';
 import { RxCross2 } from "react-icons/rx";
 import emptyCart from '../assets/emptyCart.png'
+import { Link } from 'react-router-dom';
 
 const EmptyCart = ({ showCart, setShowCart }) => {
     return (
@@ -14,7 +15,7 @@ const EmptyCart = ({ showCart, setShowCart }) => {
                 <div className="w-[430px] text-center ">
                     <Image imgSrc={emptyCart} imgAlt={"emptyCart"} className={"m-auto"} />
                     <h1 className='my-10 font-jost  text-[20px] leading-7 tracking-[0.2px] text-[#4A4A4A]'> You have not added any items to your Cart. </h1>
-                    <button className='py-5 px-10 rounded-full shadow-lg border border-black uppercase font-jost text-[14px] leading-[14.4px] tracking-[1.4px] text-[#4A4A4A] cursor-pointer hover:text-black hover:font-medium '> Continue shopping </button>
+                    <button onClick={() => setShowCart(!showCart)} className='py-5 px-10 rounded-full shadow-lg border border-black uppercase font-jost text-[14px] leading-[14.4px] tracking-[1.4px] text-[#4A4A4A] cursor-pointer hover:text-black hover:font-medium '> Continue shopping </button>
                 </div>
             </div>
         </>
