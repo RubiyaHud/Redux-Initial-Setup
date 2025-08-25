@@ -10,15 +10,12 @@ export const addToCartSlice = createSlice({
 
   reducers: {
     addToCart: (state, action) => {
-      // console.log( state.value)
-      // console.log(action.payload)
 
       {/*Check by using the "product id" that => Does the product is already in the Cart?
       state.value contains all products in the cart
       action.payload contains the only one product that is just dispatched for 'addToCart'*/}
 
       let cart = state.value.find(item => item.id == action.payload.id)
-      // console.log(cart)
 
       if (cart) {
         cart.quantity += 1
@@ -34,7 +31,6 @@ export const addToCartSlice = createSlice({
       const cartItem = state.value.find(item => item.id === productId);
 
       if (cartItem) {
-        console.log(cartItem.title);
         cartItem.quantity += 1;
       }
     },
@@ -44,7 +40,6 @@ export const addToCartSlice = createSlice({
       const cartItem = state.value.find(item => item.id === productId);
 
       if (cartItem) {
-        console.log(cartItem.title);
         if (cartItem.quantity > 1)
           cartItem.quantity -= 1;
       }
